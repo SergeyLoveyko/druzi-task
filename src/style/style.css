@@ -1,11 +1,48 @@
-@import "src/style/normalize.css";
+/* @import "src/style/normalize.css"; */
+
+:root {
+  --white: #ffffff;
+  --green: #d3f332;
+  --green-hover: #e2ff50;
+  --green-active: #a2b92d;
+  --black: #000000;
+  --bg-green: #d3f332;
+  --bg-black: #000000;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat';
-  color: white;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 67px;
+  color: var(--white);
+}
+
+h1{
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 78px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 67px;
+}
+
+h3 {
+  font-weight: 880;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24.40px;
 }
 
 .container {
@@ -14,26 +51,235 @@
   height: 100vh;
 }
 
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 46px;
+}
+
 section {
   height: 100vh;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   scroll-snap-align: start;
 }
 
-.main {
-  background-color: aqua;
-}
-.about {
-  background-color: rgb(231, 61, 112);
 
-}
 .services {
   background-color: rgb(185, 73, 236);
 
 }
 .cases {
   background-color: rgb(233, 217, 72);
+}
+
+
+/* ---------------------------------- */
+/*  -------- Section Main ----------- */
+
+.main {
+  background-color: #000000;
+}
+
+.main__header {
+  padding: 27px 0 18px 0;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-main__logo {
+  height: 62px;
+}
+
+.nav-main-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-main-header__list {
+  display: flex;
+}
+
+.nav-main-header__item {
+  list-style-type: none;
+  font-size: 24px;
+  line-height: 29.25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.nav-main-header__item:not(:last-child) {
+  margin-right: 52px;
+}
+
+.nav-main-header__item_activ {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nav-main-header__item:hover {
+  color: var(--green-hover);
+  transition: 0.3s;
+}
+
+.nav-main-header__item:active {
+  color: var(--green-active);
+  transition: 0.3s;
+}
+
+.leng-main-header {
+  display: flex;
+  align-items: center;
+}
+
+.leng-main-header__ua, 
+.leng-main-header__def, 
+.leng-main-header__en {
+  font-size: 24px;
+  line-height: 29.25px;
+}
+
+.leng-main-header__ua {
+ margin-right: 3px;
+ cursor: pointer;
+} 
+
+.leng-main-header__en {
+ margin-left: 2px;
+ cursor: pointer;
+}
+
+
+.leng-main-header_active {
+  color: var(--green);
+}
+
+.leng-main-header_choice {
+  transition: 0.3s;
+}
+
+.leng-main-header_choice:hover {
+  color: var(--green-hover);
+  transition: 0.3s;
+}
+
+.leng-main-header_choice:active {
+  color: var(--green-active);
+  transition: 0.3s;
+}
+
+
+.content-main {
+  padding: 57px 88px 0px 88px;
+}
+
+.content-main__img {
+  margin-bottom: 74px;
+}
+
+.content-main__title {
+  margin-bottom: 74px;
+}
+
+.content-main__text {
+  font-size: 36px;
+  line-height: 43.90px;
+  /* display: block; */
+}
+
+.btn-main-content {
+  display: flex;
+}
+
+.content-main__link {
+  height: 49px;
+  width: 228px;
+  margin-left: 65px;
+  padding: 11px 11px 9px 11px;
+  font-weight: 276;
+  font-size: 24px;
+  line-height: 29.30px;
+  background-color: var(--green);
+  text-decoration: none;
+}
+
+.content-main__link:hover {
 
 }
+
+.content-main__letter {
+  /* background-image: url('src/'); */
+  height: 28px;
+  width: 46px;
+  margin-bottom: -5px;
+}
+
+.content-main__letter-text {
+  font-weight: 276;
+  font-size: 24px;
+  line-height: 29.30px;
+  color: var(--black);
+  text-decoration: underline 1px solid;
+  text-underline-offset: 3px ;
+}
+
+/* .btn-main-content__icon,
+.btn-main-content__text {
+  display: block;
+} */
+
+/*  -------- Section Main ----------- */
+/* ---------------------------------- */
+
+
+
+
+/* ----------------------------------- */
+/*  -------- Section About ----------- */
+
+.about {
+  padding-top: 42px;
+  background-color: var(--bg-black);
+}
+
+.about__title {
+  margin-bottom: 76px;
+}
+
+.content-about {
+  display: flex;
+  padding-left: 61px;
+}
+
+.content-about__left-block {
+  width: 44%;
+  margin-right: 3%;
+}
+
+.content-about__right-block {
+  width: 40%;
+}
+
+.content-about__text-color {
+  font-weight: 449;
+  color: var(--green);
+}
+
+.content-about p, span {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34.13px;
+}
+
+.content-about p:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+/*  -------- Section About ----------- */
+/* ----------------------------------- */
