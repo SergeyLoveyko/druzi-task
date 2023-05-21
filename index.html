@@ -16,15 +16,33 @@
     <section class="main">
       <div class="wrapper">
         <header class="main__header header-main">
-            <a href="#" class="header-main__logo"> <img src="src/image/logo.png" alt="Productly Logo"> </a>
+            <!-- <a href="#" class="header-main__logo"> <img src="src/image/logo.png" alt="Productly Logo"> </a> -->
+            <div class="hearet-main_logo-line">
+              <div class="hamburger">
+                <div class="hamburger__line"></div>
+              </div>
+              <a href="#" class="header-main__logo"> <img src="src/image/logo.png" alt="Productly Logo"> </a>
+            </div>
             <nav class="header-main__nav nav-main-header">
               <ul class="nav-main-header__list">
-                <li class="nav-main-header__item nav-main-header__item_activ">About</li>
-                <li class="nav-main-header__item">Services</li>
-                <li class="nav-main-header__item">Casses</li>
-                <li class="nav-main-header__item">News</li>
-                <li class="nav-main-header__item">Careers</li>
-                <li class="nav-main-header__item">Contact</li>
+                <li class="nav-main-header__item">
+                  <a class="nav-main-header__link nav-main-header__link_activ" href="#about">About</a>
+                </li>
+                <li class="nav-main-header__item">
+                  <a class="nav-main-header__link"  href="#services">Services</a>
+                </li>
+                <li class="nav-main-header__item">
+                  <a class="nav-main-header__link"  href="#casses">Casses</a>
+                </li>
+                <li class="nav-main-header__item">
+                  <a class="nav-main-header__link"  href="#news">News</a>
+                </li>
+                <li class="nav-main-header__item">
+                  <a class="nav-main-header__link"  href="#careers">Careers</a>
+                </li>
+                <li class="nav-main-header__item">
+                  <a class="nav-main-header__link"  href="#contact">Contact</a>
+                </li>
               </ul>
             </nav>
             <div class="header-main__leng leng-main-header">
@@ -62,7 +80,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="wrapper">
         <h2 class="about__title">About</h2>
         <div class="about__content content-about">
@@ -109,12 +127,14 @@
         </div>
       </div>
     </section>
-    <section class="services">
+
+    <section id="services" class="services">
       <div class="wrapper">
         <h2>Our services for your business</h2>
       </div>
     </section>
-    <section class="cases">
+
+    <section id="casses" class="cases">
       <div class="wrapper">
         <h2 class="cases__title">Our cases</h2>
         <div class="container-cards">
@@ -128,6 +148,6 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./src/js/script.js" type="module"></script>
 </body>
 </html>
