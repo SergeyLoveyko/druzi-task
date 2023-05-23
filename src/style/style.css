@@ -27,6 +27,10 @@ html {
   scroll-behavior: smooth; 
 }
 
+div {
+  line-height: 0px;
+}
+
 h1{
   font-weight: 900;
   /* font-size: 64px; */
@@ -423,35 +427,58 @@ section {
 
 .card-carousel {
   scroll-snap-align: start;
-  height: 450px;
+  /* height: 400px; */
+  /* 400 / 1440 * 100 */
+  height: calc(280px + (400 - 280) * ((100vw - 320px) / (1440 - 320)));
   /* width: 347px; */
   /* width: 300px; */
   /* width: calc(218px + (300 - 218) * ((100vw - 320px) / (1440 - 320))); */
   list-style: none;
   border: 1px solid var(--border-grey);
-  padding: 108px 20px;
+  padding: 80px 20px;
 }
 
 .card-carousel__box-title {
   display: flex;
   flex-direction: column;
-  /* height: 40%; */
+  justify-content: space-between;
+  height: 78%;
+  margin-bottom: -10px;
+}
+
+.card-carousel__box-title span {
+  font-weight: 880;
+  font-size: 32px;
+  /* font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320))); */
+  line-height: 39px;
+  /* line-height: calc(16px + (39 - 16) * ((100vw - 320px) / (1440 - 320))); */
+  color: var(--green);
+}
+
+.card-carousel__img {
+  width: 77%;
 }
 
 .card-carousel__link {
-  margin-left: 40%;
+  display: inline-flex;
+  /* margin-left: 35%; */
+  margin-left: 95px;
+  /* margin-left: calc(16px + (95 - 16) * ((100vw - 320px) / (1440 - 320))); */
   text-decoration: none;
 }
 
 .card-carousel__link img {
-  margin-left: -6px;
-  margin-bottom: -4px;
+  margin-left: 7px;
+  margin-top: 4px;
+  height: 18px;
 }
 
 .card-carousel__link-text {
   font-weight: 449;
-  font-size: 20px;
-  line-height: 24.40px;
+  /* font-size: 20px; */
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
+  /* line-height: 24.40px; */
+  line-height: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
   color: var(--green);
   text-decoration: underline 1px solid;
   text-underline-offset: calc(2px + (3 - 2) * ((100vw - 320px) / (1440 - 320))) ;
@@ -832,7 +859,7 @@ section {
 @media(max-width: 600px) {
 
   .carousel {
-    grid-auto-columns: calc((100% / 1) - 15px);
+    grid-auto-columns: calc((100% / 1) - 0px);
   }
 
 }
